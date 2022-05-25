@@ -1,0 +1,23 @@
+@import "../../styles/index.scss";
+
+.header {
+    &__wrapper {
+        height: 70px;
+        width: 100%;
+        display: flex;
+        padding: 10px 61px;
+        justify-content: space-between;
+        background-color: $background-color;
+    }
+    &__span {
+        @include AlegreyaSansSC(700, normal);
+        font-size: 28px;
+        color: white;
+        margin: auto 0;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+    }
+}

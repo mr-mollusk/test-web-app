@@ -1,0 +1,14 @@
+@import '../../styles/index.scss';
+
+.button {
+    &__wrapper {
+        display: block;
+        min-width: 200px;
+        padding: 15.5px 40px;
+        background-color: white;
+    }
+    &__text {
+        @include ProximaNova();
+        font-size: 14px;
+    }
+}
