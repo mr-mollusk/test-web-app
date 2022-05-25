@@ -1,0 +1,34 @@
+@import './mixins.scss';
+
+// Подключение AlegreyaSansSC
+@include font-face('AlegreyaSansSC', '../assets/fonts/AlegreyaSansSC-Black', 900, normal, 'ttf');
+@include font-face('AlegreyaSansSC', '../assets/fonts/AlegreyaSansSC-BlackItalic', 900, italic, 'ttf');
+@include font-face('AlegreyaSansSC', '../assets/fonts/AlegreyaSansSC-ExtraBold', 700, normal, 'ttf');
+@include font-face('AlegreyaSansSC', '../assets/fonts/AlegreyaSansSC-ExtraBoldItalic', 700, italic, 'ttf');
+@include font-face('AlegreyaSansSC', '../assets/fonts/AlegreyaSansSC-Bold', 700, normal, 'ttf');
+@include font-face('AlegreyaSansSC', '../assets/fonts/AlegreyaSansSC-BoldItalic', 700, italic, 'ttf');
+@include font-face('AlegreyaSansSC', '../assets/fonts/AlegreyaSansSC-Medium', 500, normal, 'ttf');
+@include font-face('AlegreyaSansSC', '../assets/fonts/AlegreyaSansSC-MediumItalic', 500, italic, 'ttf');
+@include font-face('AlegreyaSansSC', '../assets/fonts/AlegreyaSansSC-Regular', 400, normal, 'ttf');
+@include font-face('AlegreyaSansSC', '../assets/fonts/AlegreyaSansSC-Italic', 400, italic, 'ttf');
+@include font-face('AlegreyaSansSC', '../assets/fonts/AlegreyaSansSC-Light', 300, normal, 'ttf');
+@include font-face('AlegreyaSansSC', '../assets/fonts/AlegreyaSansSC-LightItalic', 300, italic, 'ttf');
+@include font-face('AlegreyaSansSC', '../assets/fonts/AlegreyaSansSC-Thin', 100, normal, 'ttf');
+@include font-face('AlegreyaSansSC', '../assets/fonts/AlegreyaSansSC-ThinItalic', 100, italic, 'ttf');
+
+// Подключение OpenSans
+@include font-face('OpenSans', '../assets/fonts/OpenSans-ExtraBold', 800, normal, 'ttf');
+@include font-face('OpenSans', '../assets/fonts/OpenSans-ExtraBoldItalic', 800, italic, 'ttf');
+@include font-face('OpenSans', '../assets/fonts/OpenSans-Bold', 700, normal, 'ttf');
+@include font-face('OpenSans', '../assets/fonts/OpenSans-BoldItalic', 700, italic, 'ttf');
+@include font-face('OpenSans', '../assets/fonts/OpenSans-SemiBold', 600, normal, 'ttf');
+@include font-face('OpenSans', '../assets/fonts/OpenSans-SemiBoldItalic', 600, italic, 'ttf');
+@include font-face('OpenSans', '../assets/fonts/OpenSans-Medium', 500, normal, 'ttf');
+@include font-face('OpenSans', '../assets/fonts/OpenSans-MediumItalic', 500, italic, 'ttf');
+@include font-face('OpenSans', '../assets/fonts/OpenSans-Regular', 400, normal, 'ttf');
+@include font-face('OpenSans', '../assets/fonts/OpenSans-Italic', 400, italic, 'ttf');
+@include font-face('OpenSans', '../assets/fonts/OpenSans-Light', 300, normal, 'ttf');
+@include font-face('OpenSans', '../assets/fonts/OpenSans-LightItalic', 300, italic, 'ttf');
+
+// Подключение ProximaNova
+@include font-face('ProximaNova', '../assets/fonts/ProximaNova-SemiBold', 600, normal, 'ttf');

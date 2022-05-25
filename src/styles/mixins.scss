@@ -1,0 +1,40 @@
+@mixin flex($justify: center, $align: center, $direction: row, $wrap: nowrap, $gap: 0) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    gap: $gap;
+}
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $format: "woff") {
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+        @if $format == "woff" {
+            src: url("#{$file-path}.#{$format}") format($format);
+        } @else {
+            src: url("#{$file-path}.#{$format}") format("truetype");
+        }
+    }
+}
+
+@mixin AlegreyaSansSC($weight: normal, $style: normal) {
+    font-family: "AlegreyaSansSC";
+    font-weight: $weight;
+    font-style: $style;
+}
+
+@mixin OpenSans($weight: normal, $style: normal) {
+    font-family: "OpenSans";
+    font-weight: $weight;
+    font-style: $style;
+}
+
+@mixin ProximaNova() {
+    font-family: "ProximaNova";
+    font-weight: 600;
+    font-style: normal;
+}
