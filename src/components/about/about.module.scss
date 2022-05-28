@@ -1,0 +1,73 @@
+@import "../../styles/index.scss";
+
+.about {
+    &__wrapper {
+        width: 100%;
+        padding: 0 61px;
+        display: grid;
+        grid-template-columns: 5fr 6fr;
+        gap: 40px;
+        margin-bottom: 63px;
+    }
+}
+
+.platform {
+    &__title {
+        @include AlegreyaSansSC(500, normal);
+        font-size: 35px;
+        margin-bottom: 16px;
+    }
+    &__text {
+        padding-left: 42px;
+        display: grid;
+        gap: 20px;
+        border-left: 2px solid rgba($color: #000000, $alpha: 0.41);
+        position: relative;
+        &::before {
+            margin-left: -5px;
+            content: "";
+            width: 8px;
+            height: 57px;
+            background: #0d1e4b;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__subtitle {
+        @include OpenSans(700, normal);
+        font-size: 15px;
+        line-height: 20px;
+    }
+    &__content {
+        @include OpenSans(600, normal);
+        color: rgba($color: #000000, $alpha: 0.41);
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+.send {
+    &__wrapper {
+        border: 1px solid #dadada;
+        padding: 26px;
+        position: relative;
+        padding-bottom: 68px;
+    }
+    &__title {
+        @include OpenSans(600, normal);
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    &__button {
+        width: 22.5%;
+        position: absolute;
+        right: 26px;
+    }
+}
+textarea {
+    border: 1px solid black;
+    width: 100%;
+    height: 134px;
+    margin-bottom: 16px;
+}

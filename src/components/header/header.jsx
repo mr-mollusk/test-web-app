@@ -12,7 +12,7 @@ const Header = (props) => {
             <div className={s.header__buttons}>
                 <Button text="Версия для слабовидящих" />
                 <div className={s.header__link}>
-                    <Link to={"/profile"}>
+                    <Link to={"/profile/1"}>
                         <Button text="Мой профиль" />
                     </Link>
                 </div>

@@ -2,12 +2,16 @@
 
 .header {
     &__wrapper {
+        position: fixed;
         height: 70px;
         width: 100%;
         display: flex;
         padding: 10px 61px;
         justify-content: space-between;
         background-color: $background-color;
+        z-index: 100;
+        top: 0;
+        left: 0;
     }
     &__span {
         @include AlegreyaSansSC(700, normal);

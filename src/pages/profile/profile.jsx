@@ -5,18 +5,21 @@ import s from "./profile.module.scss";
 import { getAllUsers } from "../../redux/reducers/infoReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const Profile = (props) => {
+    const params = useParams();
+    console.log(params.userId);
     const dispatch = useDispatch();
-    const users = useSelector((state) => state.info);
+    const state = useSelector((state) => state.info.users);
     useEffect(() => {
         dispatch(getAllUsers());
     }, []);
-
+    console.log(state);
     return (
         <section className={s.profile__wrapper}>
-            <Info user={users[0]} />
-            <Posts id={users[0].id} />
+            <Info user={state[params.userId - 1]} />
+            <Posts id={state[params.userId - 1].id} />
             <Publics />
         </section>
     );

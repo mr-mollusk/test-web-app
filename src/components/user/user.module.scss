@@ -1,20 +1,22 @@
-@import '../../styles/index.scss';
+@import "../../styles/index.scss";
 
-.post {
+.user {
     &__wrapper {
-        
         border: 1px solid black;
-        padding: 14px 35px;
+        padding: 14px 17px;
     }
     &__title {
-        padding-bottom: 4px;
         @include OpenSans(700, normal);
         font-size: 17px;
+        margin-bottom: 4px;
     }
-    &__body {
+    &__city {
         @include OpenSans(400, normal);
         font-size: 12px;
         color: rgba(0, 0, 0, 0.41);
-        line-height: 17px;
+        margin-bottom: 35px;
+    }
+    &__button {
+        width: 75%;
     }
 }

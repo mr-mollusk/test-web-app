@@ -1,14 +1,16 @@
 import API from "../../api";
 
-const initialState = [
-    {
-        id: 1,
-        name: "Иванов Семён",
-        email: "ivanov@mail.com",
-        address: { city: "Санкт-Петербург" },
-        phone: "+7 (821) 311-21-32",
-    },
-];
+const initialState = {
+    users: [
+        {
+            id: 1,
+            name: "Иванов Семён",
+            email: "ivanov@mail.com",
+            address: { city: "Санкт-Петербург" },
+            phone: "+7 (821) 311-21-32",
+        },
+    ],
+};
 const actionTypes = {
     SET_INFO: "SET-INFO",
 };
@@ -16,8 +18,8 @@ const infoReducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.SET_INFO: {
             return {
-                ...action.info,
-                address: { ...action.address },
+                ...state,
+                users: action.users,
             };
         }
 
@@ -27,9 +29,9 @@ const infoReducer = (state = initialState, action) => {
     }
 };
 
-export const setInfoAC = (info) => ({
+export const setInfoAC = (users) => ({
     type: actionTypes.SET_INFO,
-    info: info,
+    users: users,
 });
 
 export const getAllUsers = () => (dispatch) => {
