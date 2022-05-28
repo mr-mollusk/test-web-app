@@ -19,5 +19,11 @@
         display: flex;
         justify-content: space-between;
         gap: 12px;
+        a {
+            display: block;
+            height: 100%;
+        }
+    }
+    &__link {
     }
 }

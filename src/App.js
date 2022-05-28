@@ -1,15 +1,14 @@
-import logo from './logo.svg';
-import './App.scss';
-import Header from './components/header/header';
-import Profile from './pages/profile/profile';
+import "./App.scss";
+import Header from "./components/header/header";
+import MyRouting from "./routes";
 
 function App() {
-  return (
-    <div className="App">
-        <Header />
-        <Profile />
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header />
+            <MyRouting />
+        </div>
+    );
 }
 
 export default App;
