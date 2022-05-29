@@ -1,8 +1,13 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { getAllUsers } from "../../redux/reducers/infoReducer";
 import User from "../user/user";
 import s from "./users.module.scss";
+import "swiper/scss";
+import "swiper/scss/pagination";
+import "swiper/scss/scrollbar";
+import { Navigation, Pagination } from "swiper";
 
 const Users = (props) => {
     const dispatch = useDispatch();
@@ -13,17 +18,25 @@ const Users = (props) => {
     return (
         <section className={s.users__wrapper}>
             <div className={s.users__title}>Купили билеты</div>
+
             <div className={s.users__content}>
-                {state
-                    .filter((post, k) => k < 4)
-                    .map((user) => (
-                        <User
-                            name={user.name}
-                            city={user.address.city}
-                            key={user.id}
-                            id={user.id}
-                        />
+                <Swiper
+                    modules={[Pagination]}
+                    
+                    pagination={{ clickable: true }}
+                    spaceBetween={20}
+                    slidesPerView={4}
+                >
+                    {state.map((user) => (
+                        <SwiperSlide key={user.id}>
+                            <User
+                                name={user.name}
+                                city={user.address.city}
+                                id={user.id}
+                            />
+                        </SwiperSlide>
                     ))}
+                </Swiper>
             </div>
         </section>
     );

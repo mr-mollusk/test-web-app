@@ -2,7 +2,7 @@
 
 .users {
     &__wrapper {
-        width: 100%;
+        
         padding: 31px 60px;
         margin-bottom: 16px;
     }
@@ -12,8 +12,5 @@
         margin-bottom: 16px;
     }
     &__content {
-        display: grid;
-        grid-template-columns: 3fr 3fr 3fr 3fr;
-        gap: 13px;
     }
 }

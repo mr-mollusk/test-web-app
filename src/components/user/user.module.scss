@@ -2,6 +2,9 @@
 
 .user {
     &__wrapper {
+        width: 100%;
+        align-self: stretch;
+        min-height: 100%;
         border: 1px solid black;
         padding: 14px 17px;
     }
