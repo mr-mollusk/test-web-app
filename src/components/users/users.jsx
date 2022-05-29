@@ -10,7 +10,6 @@ const Users = (props) => {
     useEffect(() => {
         dispatch(getAllUsers());
     }, []);
-    console.log(state);
     return (
         <section className={s.users__wrapper}>
             <div className={s.users__title}>Купили билеты</div>

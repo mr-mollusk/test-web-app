@@ -4,9 +4,10 @@ import { getPostsByUserId } from "../../redux/reducers/postsReducer";
 import Post from "../post/post";
 import s from "./posts.module.scss";
 import Button from "../button/button";
+import { Link } from "react-router-dom";
 
 const Posts = (props) => {
-    const minPostsCount = 3;
+    const minPostsCount = 2;
     const { posts } = useSelector((state) => state.posts);
     const [postCount, setPostCount] = useState(minPostsCount);
     const dispatch = useDispatch();
@@ -24,17 +25,21 @@ const Posts = (props) => {
                 {posts
                     .filter((post, k) => k < postCount)
                     .map((post) => (
-                        <Post
-                            title={post.title}
-                            body={post.body}
-                            key={post.id}
-                        />
+                        <Link to={`../comments/${post.id}`}>
+                            <Post
+                                title={post.title}
+                                body={post.body}
+                                key={post.id}
+                            />
+                        </Link>
                     ))}
             </div>
             <div className={s.posts__button}>
                 <Button
                     text={
-                        postCount === minPostsCount ? "Показать все посты" : "Скрыть посты"
+                        postCount === minPostsCount
+                            ? "Показать все посты"
+                            : "Скрыть посты"
                     }
                     type="black"
                     onClick={() => showAllPosts()}
