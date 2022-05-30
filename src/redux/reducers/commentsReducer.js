@@ -66,9 +66,10 @@ export const getCommentsByPostId = (id) => (dispatch) => {
 };
 
 export const postComment = (postId, name, email, body) => (dispatch) => {
-    API.comments
-        .postComment(postId, name, email, body)
-        .then((response) => dispatch(getCommentsByPostId(postId)));
+    API.comments.postComment(postId, name, email, body).then((response) => {
+        dispatch(getCommentsByPostId(postId));
+        alert(`Response status: ${response.status}`);
+    });
 };
 
 export default commentsReducer;

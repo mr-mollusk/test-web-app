@@ -7,6 +7,7 @@
         min-height: 100%;
         border: 1px solid black;
         padding: 14px 17px;
+        position: relative;
     }
     &__title {
         @include OpenSans(700, normal);
@@ -17,9 +18,11 @@
         @include OpenSans(400, normal);
         font-size: 12px;
         color: rgba(0, 0, 0, 0.41);
-        margin-bottom: 35px;
+        margin-bottom: 30%;
     }
     &__button {
         width: 75%;
+        position: absolute;
+        bottom: 15px;
     }
 }

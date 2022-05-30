@@ -1,12 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import {
     getCommentsByPostId,
-    getCommentsByUserId,
     getPostById,
     postComment,
-    setCommentsAC,
 } from "../../redux/reducers/commentsReducer";
 import Post from "../../components/post/post";
 import s from "./comments.module.scss";
@@ -21,14 +19,19 @@ const Comments = (props) => {
     const [email, setEmail] = useState("");
     const post = useSelector((state) => state.comments.post);
     const comments = useSelector((state) => state.comments.comments);
+
     useEffect(() => {
         dispatch(getPostById(params.postId));
         dispatch(getCommentsByPostId(params.postId));
     }, []);
+
     const postCommentOnClick = useCallback(() => {
-        debugger
         dispatch(postComment(post.id, name, email, commentText));
+        setCommentText("");
+        setName("");
+        setEmail("");
     }, [commentText, dispatch, email, name, post.id]);
+
     return (
         <section className={s.comments__wrapper}>
             <div className={s.comments__post}>

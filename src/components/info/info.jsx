@@ -29,7 +29,10 @@ const Info = (props) => {
                         <Button text="Написать сообщение" type="black" />
                     </div>
                     <div className={`${s.info__cell} ${s.info__last}`}>
-                        <Button text="Предложить сходить на концерт" type="black"/>
+                        <Button
+                            text="Предложить сходить на концерт"
+                            type="black"
+                        />
                     </div>
                     <div className={s.info__cell}></div>
                 </div>

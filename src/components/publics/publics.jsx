@@ -1,6 +1,6 @@
 import s from "./publics.module.scss";
 
-const Publics = (props) => {
+const Publics = () => {
     return (
         <section className={s.publics__wrapper}>
             <div className={s.publics__title}>Публикации</div>

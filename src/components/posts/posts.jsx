@@ -11,13 +11,16 @@ const Posts = (props) => {
     const { posts } = useSelector((state) => state.posts);
     const [postCount, setPostCount] = useState(minPostsCount);
     const dispatch = useDispatch();
+
     useEffect(() => {
         dispatch(getPostsByUserId(props.id));
     }, [dispatch, props.id]);
+
     const showAllPosts = useCallback(() => {
         if (postCount === minPostsCount) setPostCount(posts.length);
         else setPostCount(minPostsCount);
     }, [postCount, posts.length]);
+
     return (
         <section className={s.posts__wrapper}>
             <div className={s.posts__title}>Посты</div>
@@ -25,12 +28,8 @@ const Posts = (props) => {
                 {posts
                     .filter((post, k) => k < postCount)
                     .map((post) => (
-                        <Link to={`../comments/${post.id}`}>
-                            <Post
-                                title={post.title}
-                                body={post.body}
-                                key={post.id}
-                            />
+                        <Link key={post.id} to={`../comments/${post.id}`}>
+                            <Post title={post.title} body={post.body} />
                         </Link>
                     ))}
             </div>

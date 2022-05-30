@@ -6,7 +6,6 @@
         display: grid;
         grid-template-columns: 1.5fr 7fr;
         gap: 20px;
-        
     }
     &__title {
         @include AlegreyaSansSC(500, normal);

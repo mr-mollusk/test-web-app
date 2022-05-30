@@ -6,7 +6,6 @@ import { getAllUsers } from "../../redux/reducers/infoReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Comments from "../comments/comments";
 
 const Profile = () => {
     const params = useParams();

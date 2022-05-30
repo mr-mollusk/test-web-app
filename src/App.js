@@ -6,11 +6,13 @@ import MyRouting from "./routes";
 
 function App() {
     const location = useLocation();
+
     useEffect(() => {
         if (location.pathname) {
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
     }, [location.pathname]);
+
     return (
         <div className="App">
             <Header />

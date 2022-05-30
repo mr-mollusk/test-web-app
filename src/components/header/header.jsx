@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Button from "../button/button";
 import s from "./header.module.scss";
 
-const Header = (props) => {
+const Header = () => {
     return (
         <header className={s.header__wrapper}>
             <span className={s.header__span}>
